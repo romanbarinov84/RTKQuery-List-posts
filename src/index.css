@@ -43,13 +43,3 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-form{
-  width: 600px;
-  padding: 30px;
-  display: flex;
-  border-radius: 10px;
-  background-color: aliceblue;
-  gap: 30px;
-  flex-direction: column;
-  border: 2px solid cornflowerblue;
-}
