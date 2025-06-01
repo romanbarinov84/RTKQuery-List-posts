@@ -44,3 +44,7 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+img{
+  width: 300px;
+  height: 300pc;
+}
