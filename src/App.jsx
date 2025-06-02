@@ -10,12 +10,12 @@ function App() {
 
   return (
     <>
-    <div style={{ padding: "2rem" }}>
+    <div style={{ padding: "2rem",border:"5px solid green",marginLeft:"50px",textAlign:"center",background:"lightgray",boxShadow:"3px 4px 4px 2px #333" }}>
       <h1>Posts from rtk query</h1>
-      {posts && <ul>
+      {posts && <ul style={{border:"3px solid #333",padding:"10px",background:"lightblue"}}>
         {
           posts.map((post) => (
-            <li key={post.id}>
+            <li style={{listStyleType:"none",marginBottom:"5px",background:"wheat"}} key={post.id} >
               <div style={{display:"flex",flexDirection:"column",border:"2px solid gray",padding:"10px"}}>
               <strong style={{color:"cornflowerblue",fontSize:"30px"}}>{post.title}</strong>
               <p>{post.body}</p>
