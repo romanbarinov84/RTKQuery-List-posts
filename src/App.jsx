@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useGetPostsByIdQuery,useGetPostsQuery,useCreatedPostsMutation,useUpdatedPostsMutation,useDeletedPostsMutation, usePrefetch } from "./services/postsApi";
+import { useGetPostsByIdQuery,useGetPostsQuery,usePrefetch } from "./services/postsApi";
 
 
 
@@ -10,7 +10,7 @@ function App() {
 
 
   const validPostId = postId > 0 ? postId : undefined;
- const {data:post, isLoad: isLoadingPost , error:isError} = useGetPostsByIdQuery(postId,{
+ const {data:post, isLoading: isLoadingPost , error:isError} = useGetPostsByIdQuery(postId,{
   
   pollingInterval: 10000, //обновленние данных каждые 10 сек
   skipPollingIfUnfocused: true,// отмена обновления если закрыть вкладку или выйти
@@ -31,7 +31,7 @@ function App() {
     
   }
 
-  const prefetchPosts = usePrefetch("getPostsById")
+ const prefetchPosts = usePrefetch("getPostsById")
 
   return (
     <>
